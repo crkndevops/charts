@@ -11,28 +11,28 @@ storage:
   ephemeral: false  # will not allocate PVs when true
   master:
     count: 2
-    size: 10Gi
+    size: 3Gi
     storageClass: standard
   tserver:
     count: 2
-    size: 10Gi
+    size: 3Gi
     storageClass: standard
 
 resource:
   master:
     requests:
-      cpu: 2
+      cpu: 0.5
       memory: 2Gi
     limits:
-      cpu: 2
+      cpu: 0.5
       memory: 2Gi
   tserver:
     requests:
-      cpu: 2
-      memory: 4Gi
+      cpu: 0.5
+      memory: 2Gi
     limits:
-      cpu: 2
-      memory: 4Gi
+      cpu: 0.5
+      memory: 2Gi
 
 replicas:
   master: 3
